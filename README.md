@@ -239,9 +239,7 @@ a public notebook or repository.
 
 If you use this work, please cite:
 
-> Farhadian, G., Saeedi, M., & Ha, J. Digital Transformation Pathways Across Health
-> and Governance: A Reproducible Similarity and Knowledge-Network Analysis of
-> SDG 3 and SDG 16. Manuscript in preparation.
+XXXX
 
 ## License
 
