@@ -10,9 +10,7 @@ constructs network models to characterize the relationship between the two domai
 
 ## Authors
 
-- **Gelareh Farhadian** — Fairleigh Dickinson University — g.farhadian@fdu.edu
-- **Mohsen Saeedi** — Simon Fraser University — mohsens@sfu.ca
-- **Jeffrey Ha** — Douglas College — haj2@douglascollege.ca
+After peer- reviewed 
 
 ## Summary
 
