@@ -1,0 +1,185 @@
+{
+  "metadata": {
+    "name": "DT-SDG 3/16 Technology-Mechanism-Outcome Codebook",
+    "version": "1.0.0",
+    "method": "Dictionary- and rule-based computer-assisted content analysis with sentence-level evidence and mandatory human validation",
+    "unit_of_analysis": "Technology-outcome relationship reported in a sentence or tightly linked adjacent sentence pair",
+    "important_note": "Automated candidates are not final codes. Retain the evidence text and complete the human review fields before inferential analysis."
+  },
+  "technologies": [
+    {
+      "code": "TECH_AI_ML",
+      "label": "Artificial intelligence and machine learning",
+      "definition": "AI, machine-learning, deep-learning, NLP, computer-vision, or algorithmic decision-support systems.",
+      "patterns": ["\\bartificial intelligence\\b", "\\bmachine learning\\b", "\\bdeep learning\\b", "\\bneural networks?\\b", "\\bnatural language processing\\b", "\\bcomputer vision\\b", "\\bgenerative ai\\b", "\\balgorithmic decision[- ]support\\b", "\\bai[- ]enabled\\b", "\\bai[- ]based\\b"]
+    },
+    {
+      "code": "TECH_TELEHEALTH",
+      "label": "Telehealth and remote care",
+      "definition": "Remote consultation, virtual care, and remote patient-monitoring technologies.",
+      "patterns": ["\\btelemedicine\\b", "\\btelehealth\\b", "\\bvirtual care\\b", "\\bremote consultations?\\b", "\\bremote patient monitoring\\b", "\\bvideo consultations?\\b"]
+    },
+    {
+      "code": "TECH_MHEALTH",
+      "label": "Mobile health and mobile applications",
+      "definition": "Mobile-health applications, smartphone applications, and mobile or SMS interventions.",
+      "patterns": ["\\bmhealth\\b", "\\bmobile health\\b", "\\bhealth apps?\\b", "\\bmobile apps?\\b", "\\bsmartphone apps?\\b", "\\bmobile[- ]based intervention\\b", "\\bsms[- ]based\\b", "\\btext messag(?:e|ing) intervention\\b"]
+    },
+    {
+      "code": "TECH_EHR_HIS",
+      "label": "Electronic records and health information systems",
+      "definition": "Electronic health/medical records and integrated health information systems.",
+      "patterns": ["\\belectronic health records?\\b", "\\belectronic medical records?\\b", "\\behr systems?\\b", "\\bemr systems?\\b", "\\bhealth information systems?\\b", "\\bhospital information systems?\\b", "\\bdigital health records?\\b"]
+    },
+    {
+      "code": "TECH_DATA_ANALYTICS",
+      "label": "Big data and advanced analytics",
+      "definition": "Big-data infrastructures and advanced or predictive analytics not already coded as a specific AI system.",
+      "patterns": ["\\bbig data\\b", "\\bdata analytics\\b", "\\badvanced analytics\\b", "\\bpredictive analytics\\b", "\\bbusiness intelligence\\b", "\\bdata mining\\b"]
+    },
+    {
+      "code": "TECH_IOT_WEARABLE",
+      "label": "Internet of Things, sensors, and wearables",
+      "definition": "Connected sensors, Internet-of-Things systems, wearable devices, and biosensors.",
+      "patterns": ["\\binternet of things\\b", "\\biot[- ](?:based|enabled)\\b", "\\bwearable devices?\\b", "\\bwearable sensors?\\b", "\\bbiosensors?\\b", "\\bsmart sensors?\\b", "\\bconnected devices?\\b"]
+    },
+    {
+      "code": "TECH_BLOCKCHAIN",
+      "label": "Blockchain and distributed ledgers",
+      "definition": "Blockchain, smart-contract, and distributed-ledger technologies.",
+      "patterns": ["\\bblockchain\\b", "\\bdistributed ledger(?: technology| technologies)?\\b", "\\bsmart contracts?\\b", "\\bdlt[- ]based\\b"]
+    },
+    {
+      "code": "TECH_DIGITAL_ID",
+      "label": "Digital identity and biometrics",
+      "definition": "Digital identification, authentication, and biometric identity systems.",
+      "patterns": ["\\bdigital identit(?:y|ies)\\b", "\\belectronic identit(?:y|ies)\\b", "\\be[- ]id\\b", "\\bbiometric identification\\b", "\\bbiometric authentication\\b", "\\bdigital authentication\\b"]
+    },
+    {
+      "code": "TECH_EGOV",
+      "label": "E-government and digital public-service platforms",
+      "definition": "E-government, digital-government, and online public-service delivery systems.",
+      "patterns": ["\\be[- ]government\\b", "\\bdigital government\\b", "\\be[- ]governance\\b", "\\bonline public services?\\b", "\\bdigital public services?\\b", "\\bgovernment digital platforms?\\b", "\\belectronic government\\b"]
+    },
+    {
+      "code": "TECH_DPI_INTEROP",
+      "label": "Digital public infrastructure and interoperability",
+      "definition": "Digital public infrastructure, interoperability layers, exchanges, and standards.",
+      "patterns": ["\\bdigital public infrastructure\\b", "\\binteroperab(?:ility|le)\\b", "\\bhealth information exchange\\b", "\\bdata exchange platforms?\\b", "\\bapplication programming interfaces?\\b", "\\bopen standards?\\b"]
+    },
+    {
+      "code": "TECH_CIVIC_SOCIAL",
+      "label": "Civic technology, social media, and e-participation",
+      "definition": "Digital participation, civic-technology, crowdsourcing, and social-media platforms.",
+      "patterns": ["\\bcivic technolog(?:y|ies)\\b", "\\be[- ]participation\\b", "\\bdigital participation\\b", "\\bonline participation\\b", "\\bsocial media platforms?\\b", "\\bcrowdsourcing platforms?\\b", "\\bdigital citizen engagement\\b"]
+    },
+    {
+      "code": "TECH_CLOUD_EDGE",
+      "label": "Cloud and edge computing",
+      "definition": "Cloud-computing, cloud-service, and edge-computing infrastructures.",
+      "patterns": ["\\bcloud computing\\b", "\\bcloud[- ]based\\b", "\\bcloud platforms?\\b", "\\bedge computing\\b", "\\bsoftware as a service\\b"]
+    },
+    {
+      "code": "TECH_CYBER_PRIVACY",
+      "label": "Cybersecurity and privacy-enhancing technologies",
+      "definition": "Cybersecurity tools and technical privacy-preserving systems.",
+      "patterns": ["\\bcybersecurity\\b", "\\bcyber security\\b", "\\bcybersecurity technolog(?:y|ies)\\b", "\\bcybersecurity systems?\\b", "\\bcybersecurity tools?\\b", "\\bcybersecurity mechanisms?\\b", "\\bprivacy[- ]enhancing technolog(?:y|ies)\\b", "\\bprivacy[- ]preserving technolog(?:y|ies)\\b", "\\bencryption technolog(?:y|ies)\\b", "\\bzero[- ]trust architecture\\b", "\\bfederated learning\\b"]
+    },
+    {
+      "code": "TECH_GIS_REMOTE",
+      "label": "GIS, geospatial, and remote-sensing technologies",
+      "definition": "Geographic information systems, geospatial analytics, and remote sensing.",
+      "patterns": ["\\bgeographic information systems?\\b", "\\bgis[- ]based\\b", "\\bgeospatial technolog(?:y|ies)\\b", "\\bgeospatial analytics\\b", "\\bremote sensing\\b", "\\bsatellite imagery\\b"]
+    },
+    {
+      "code": "TECH_ROBOTICS_AUTO",
+      "label": "Robotics and process automation",
+      "definition": "Robotics, robotic-process automation, and automated service technologies.",
+      "patterns": ["\\brobotics?\\b", "\\brobotic process automation\\b", "\\bprocess automation\\b", "\\bservice robots?\\b", "\\bautomated dispensing\\b"]
+    },
+    {
+      "code": "TECH_OPEN_DATA",
+      "label": "Open-data and transparency platforms",
+      "definition": "Open-government-data portals, public dashboards, and open-data platforms.",
+      "patterns": ["\\bopen data platforms?\\b", "\\bopen government data\\b", "\\bopen data portals?\\b", "\\bpublic data dashboards?\\b", "\\btransparency portals?\\b"]
+    },
+    {
+      "code": "TECH_FINTECH_PAYMENT",
+      "label": "Digital payments and financial technologies",
+      "definition": "Digital-payment, mobile-money, and fintech systems relevant to service access or public administration.",
+      "patterns": ["\\bdigital payments?\\b", "\\bmobile money\\b", "\\bfinancial technolog(?:y|ies)\\b", "\\bfintech\\b", "\\belectronic payments?\\b"]
+    },
+    {
+      "code": "TECH_PLATFORM_GENERAL",
+      "label": "General digital platforms and ICT",
+      "definition": "General digital platforms, ICT, or digital-transformation technologies when no specific technology is stated.",
+      "patterns": ["\\bdigital platforms?\\b", "\\bdigital technolog(?:y|ies)\\b", "\\binformation and communication technolog(?:y|ies)\\b", "\\bict[- ]enabled\\b", "\\bdigital solutions?\\b", "\\bdigital innovations?\\b", "\\bdigital transformation\\b"]
+    }
+  ],
+  "mechanisms": [
+    {"code": "MECH_ACCESS", "label": "Access and reach", "patterns": ["\\bremote access\\b", "\\bgeographic barriers?\\b", "\\bservice reach\\b", "\\baccessibility\\b", "\\blast[- ]mile\\b"]},
+    {"code": "MECH_DATA_SHARE", "label": "Data sharing and interoperability", "patterns": ["\\bdata shar(?:e|ing)\\b", "\\binformation shar(?:e|ing)\\b", "\\binteroperab(?:ility|le)\\b", "\\bdata exchange\\b", "\\binformation exchange\\b"]},
+    {"code": "MECH_AUTOMATION", "label": "Automation and process redesign", "patterns": ["\\bautomation\\b", "\\bautomated workflows?\\b", "\\bprocess redesign\\b", "\\bworkflow optimization\\b", "\\badministrative burden\\b"]},
+    {"code": "MECH_DECISION", "label": "Decision support and prediction", "patterns": ["\\bdecision support\\b", "\\bpredictive capability\\b", "\\breal[- ]time insights?\\b", "\\bevidence[- ]based decisions?\\b", "\\brisk prediction\\b"]},
+    {"code": "MECH_MONITOR", "label": "Monitoring, surveillance, and traceability", "patterns": ["\\breal[- ]time monitoring\\b", "\\bcontinuous monitoring\\b", "\\bdisease surveillance\\b", "\\btraceability\\b", "\\btracking systems?\\b"]},
+    {"code": "MECH_COORD", "label": "Coordination and integration", "patterns": ["\\binterorganizational coordination\\b", "\\binter[- ]agency coordination\\b", "\\bcare coordination\\b", "\\bintegrated services?\\b", "\\bcross[- ]sector collaboration\\b"]},
+    {"code": "MECH_PARTICIPATE", "label": "Participation and engagement", "patterns": ["\\bcitizen engagement\\b", "\\bpatient engagement\\b", "\\bstakeholder participation\\b", "\\bco[- ]creation\\b", "\\bparticipatory decision[- ]making\\b"]},
+    {"code": "MECH_TRANSPARENCY", "label": "Transparency and auditability", "patterns": ["\\btransparency\\b", "\\bauditability\\b", "\\bvisible records?\\b", "\\bpublic disclosure\\b", "\\bimmutable records?\\b"]},
+    {"code": "MECH_TRUST", "label": "Trust and legitimacy", "patterns": ["\\bdigital trust\\b", "\\bpublic trust\\b", "\\binstitutional trust\\b", "\\bperceived legitimacy\\b", "\\btrustworthy\\b"]},
+    {"code": "MECH_PERSONAL", "label": "Personalization and tailoring", "patterns": ["\\bpersonalized care\\b", "\\bprecision medicine\\b", "\\btailored interventions?\\b", "\\bpersonalized services?\\b"]},
+    {"code": "MECH_CAPACITY", "label": "Capacity, speed, and efficiency", "patterns": ["\\binstitutional capacity\\b", "\\boperational efficiency\\b", "\\bprocessing time\\b", "\\bresource optimization\\b", "\\bscalability\\b"]},
+    {"code": "MECH_SECURITY", "label": "Security, privacy, and consent", "patterns": ["\\bdata security\\b", "\\bprivacy protection\\b", "\\binformed consent\\b", "\\baccess controls?\\b", "\\bsecure data\\b"]},
+    {"code": "MECH_INCLUSION", "label": "Inclusion and digital capability", "patterns": ["\\bdigital inclusion\\b", "\\bdigital literacy\\b", "\\baffordability\\b", "\\baccessible design\\b", "\\bdigital divide\\b"]}
+  ],
+  "outcomes": [
+    {"code": "SDG3_ACCESS", "sdg": "SDG3", "label": "Access, coverage, and availability of health services", "patterns": ["\\baccess to (?:health|healthcare|medical) (?:care|services?)\\b", "\\bhealthcare access\\b", "\\bhealth service access\\b", "\\buniversal health coverage\\b", "\\bservice availability\\b", "\\bhealth coverage\\b", "\\bwaiting times?\\b"]},
+    {"code": "SDG3_QUALITY", "sdg": "SDG3", "label": "Quality and safety of care", "patterns": ["\\bquality of care\\b", "\\bcare quality\\b", "\\bpatient safety\\b", "\\bmedical errors?\\b", "\\bclinical quality\\b", "\\bsafe care\\b"]},
+    {"code": "SDG3_CLINICAL", "sdg": "SDG3", "label": "Clinical and population-health outcomes", "patterns": ["\\bhealth outcomes?\\b", "\\bclinical outcomes?\\b", "\\bmortality\\b", "\\bmorbidity\\b", "\\blife expectancy\\b", "\\bdisease burden\\b", "\\bpopulation health\\b", "\\bquality[- ]adjusted life\\b"]},
+    {"code": "SDG3_COST_EFF", "sdg": "SDG3", "label": "Health-system cost and efficiency", "patterns": ["\\bhealthcare costs?\\b", "\\bhealth system efficiency\\b", "\\bcost[- ]effectiveness\\b", "\\bresource utilization\\b", "\\bclinical productivity\\b", "\\boperational costs?\\b"]},
+    {"code": "SDG3_PATIENT", "sdg": "SDG3", "label": "Patient engagement, adherence, and self-management", "patterns": ["\\bpatient engagement\\b", "\\bpatient empowerment\\b", "\\btreatment adherence\\b", "\\bmedication adherence\\b", "\\bself[- ]management\\b", "\\bpatient satisfaction\\b"]},
+    {"code": "SDG3_EQUITY", "sdg": "SDG3", "label": "Health equity and disparities", "patterns": ["\\bhealth equity\\b", "\\bhealth inequalit(?:y|ies)\\b", "\\bhealth disparities\\b", "\\binequitable healthcare\\b", "\\brural health access\\b", "\\bunderserved populations?\\b"]},
+    {"code": "SDG3_PREVENT", "sdg": "SDG3", "label": "Prevention, preparedness, and disease surveillance", "patterns": ["\\bdisease prevention\\b", "\\bpreventive care\\b", "\\bpublic health surveillance\\b", "\\boutbreak detection\\b", "\\bpandemic preparedness\\b", "\\bhealth emergency preparedness\\b"]},
+    {"code": "SDG3_WORKFORCE", "sdg": "SDG3", "label": "Health-workforce capacity and performance", "patterns": ["\\bhealth workforce\\b", "\\bhealthcare workforce\\b", "\\bclinician workload\\b", "\\bprovider workload\\b", "\\bclinical capacity\\b", "\\bhealth worker productivity\\b"]},
+    {"code": "SDG3_MENTAL", "sdg": "SDG3", "label": "Mental health and well-being", "patterns": ["\\bmental health outcomes?\\b", "\\bmental well[- ]being\\b", "\\bpsychological well[- ]being\\b", "\\bdepression symptoms?\\b", "\\banxiety symptoms?\\b"]},
+    {"code": "SDG3_CONTINUITY", "sdg": "SDG3", "label": "Continuity and coordination of care", "patterns": ["\\bcontinuity of care\\b", "\\bcare coordination\\b", "\\bintegrated care\\b", "\\breferral continuity\\b", "\\bfragmented care\\b"]},
+    {"code": "SDG3_DIAG_TREAT", "sdg": "SDG3", "label": "Diagnosis and treatment performance", "patterns": ["\\bdiagnostic accuracy\\b", "\\bearly diagnosis\\b", "\\btreatment effectiveness\\b", "\\bclinical decision accuracy\\b", "\\bdiagnostic delay\\b", "\\btreatment outcomes?\\b"]},
+    {"code": "SDG16_TRANSPARENCY", "sdg": "SDG16", "label": "Transparency and openness", "patterns": ["\\bgovernment transparency\\b", "\\binstitutional transparency\\b", "\\bpublic transparency\\b", "\\bdata transparency\\b", "\\bopen government\\b", "\\btransparent decision[- ]making\\b", "\\btransparency of public services\\b", "\\btransparency and accountability\\b"]},
+    {"code": "SDG16_ACCOUNT", "sdg": "SDG16", "label": "Accountability and answerability", "patterns": ["\\bpublic accountability\\b", "\\binstitutional accountability\\b", "\\badministrative accountability\\b", "\\bgovernment accountability\\b", "\\balgorithmic accountability\\b", "\\bhealth system accountability\\b", "\\baccountability mechanisms?\\b", "\\banswerability\\b", "\\baudit trails?\\b"]},
+    {"code": "SDG16_CAPACITY", "sdg": "SDG16", "label": "Institutional capacity and public-sector effectiveness", "patterns": ["\\binstitutional capacity\\b", "\\bgovernment capacity\\b", "\\bpublic sector efficiency\\b", "\\badministrative efficiency\\b", "\\binstitutional effectiveness\\b", "\\bgovernment effectiveness\\b"]},
+    {"code": "SDG16_SERVICE", "sdg": "SDG16", "label": "Access to inclusive public services", "patterns": ["\\baccess to public services\\b", "\\bpublic service delivery\\b", "\\bdigital public services\\b", "\\binclusive public services\\b", "\\badministrative service access\\b"]},
+    {"code": "SDG16_PARTICIPATION", "sdg": "SDG16", "label": "Participation and responsive decision-making", "patterns": ["\\bcitizen participation\\b", "\\bpublic participation\\b", "\\bparticipatory governance\\b", "\\bcivic engagement\\b", "\\binclusive decision[- ]making\\b", "\\bresponsive decision[- ]making\\b"]},
+    {"code": "SDG16_TRUST", "sdg": "SDG16", "label": "Public trust and institutional legitimacy", "patterns": ["\\bpublic trust\\b", "\\btrust in government\\b", "\\binstitutional trust\\b", "\\bgovernment legitimacy\\b", "\\binstitutional legitimacy\\b", "\\btrust in public institutions\\b"]},
+    {"code": "SDG16_CORRUPTION", "sdg": "SDG16", "label": "Corruption control and integrity", "patterns": ["\\bcorruption reduction\\b", "\\banti[- ]corruption\\b", "\\bcontrol of corruption\\b", "\\bpublic integrity\\b", "\\bprocurement fraud\\b", "\\bbribery\\b"]},
+    {"code": "SDG16_PRIVACY", "sdg": "SDG16", "label": "Privacy, data protection, and data rights", "patterns": ["\\bdata privacy\\b", "\\bprivacy protection\\b", "\\bdata protection\\b", "\\binformational privacy\\b", "\\bdata rights\\b", "\\binformed consent\\b", "\\bdata sovereignty\\b"]},
+    {"code": "SDG16_CYBER", "sdg": "SDG16", "label": "Cybersecurity and institutional resilience", "patterns": ["\\bcyber resilience\\b", "\\bcybersecurity resilience\\b", "\\bcybersecurity preparedness\\b", "\\bcybersecurity capacity\\b", "\\bcybersecurity risks?\\b", "\\bdata breaches?\\b", "\\bcyber threats?\\b", "\\binformation security risks?\\b"]},
+    {"code": "SDG16_JUSTICE", "sdg": "SDG16", "label": "Rule of law and access to justice", "patterns": ["\\brule of law\\b", "\\baccess to justice\\b", "\\bjudicial access\\b", "\\blegal empowerment\\b", "\\bjustice services\\b", "\\blegal accountability\\b"]},
+    {"code": "SDG16_COORD", "sdg": "SDG16", "label": "Interagency coordination and policy coherence", "patterns": ["\\binter[- ]agency coordination\\b", "\\bintergovernmental coordination\\b", "\\bpolicy coordination\\b", "\\bpolicy coherence\\b", "\\bcross[- ]sector governance\\b", "\\bwhole[- ]of[- ]government\\b"]},
+    {"code": "SDG16_INCLUSION", "sdg": "SDG16", "label": "Institutional inclusion and equal access", "patterns": ["\\binclusive institutions?\\b", "\\binstitutional inclusion\\b", "\\bdigital exclusion\\b", "\\bequal access to services\\b", "\\bmarginalized citizens?\\b", "\\bnondiscriminatory services?\\b"]},
+    {"code": "SDG16_POLICY", "sdg": "SDG16", "label": "Evidence-informed policy and decision quality", "patterns": ["\\bevidence[- ]informed policy\\b", "\\bevidence[- ]based policy\\b", "\\bpolicy decision quality\\b", "\\bdata[- ]driven policy\\b", "\\bpublic decision quality\\b"]}
+  ],
+  "study_designs": [
+    {"code": "DESIGN_META", "label": "Systematic review or meta-analysis", "patterns": ["\\bsystematic review\\b", "\\bmeta[- ]analysis\\b"]},
+    {"code": "DESIGN_RANDOM", "label": "Randomized experiment", "patterns": ["\\brandomi[sz]ed controlled trial\\b", "\\brandomi[sz]ed experiment\\b", "\\brct\\b"]},
+    {"code": "DESIGN_QUASI", "label": "Quasi-experimental or causal observational", "patterns": ["\\bdifference[- ]in[- ]differences\\b", "\\bregression discontinuity\\b", "\\binstrumental variables?\\b", "\\bquasi[- ]experimental\\b", "\\bpropensity score matching\\b"]},
+    {"code": "DESIGN_LONG", "label": "Longitudinal or cohort study", "patterns": ["\\blongitudinal study\\b", "\\bcohort study\\b", "\\bpanel data\\b", "\\bfollow[- ]up study\\b"]},
+    {"code": "DESIGN_MIXED", "label": "Mixed-methods study", "patterns": ["\\bmixed[- ]methods?\\b", "\\bmixed methods?\\b"]},
+    {"code": "DESIGN_QUAL", "label": "Qualitative study", "patterns": ["\\bqualitative study\\b", "\\bsemi[- ]structured interviews?\\b", "\\bfocus groups?\\b", "\\bthematic analysis\\b", "\\bethnograph(?:y|ic)\\b"]},
+    {"code": "DESIGN_SURVEY", "label": "Cross-sectional survey", "patterns": ["\\bcross[- ]sectional\\b", "\\bsurvey data\\b", "\\bquestionnaire\\b"]},
+    {"code": "DESIGN_CASE", "label": "Case study", "patterns": ["\\bcase stud(?:y|ies)\\b", "\\bmultiple[- ]case study\\b"]},
+    {"code": "DESIGN_COMPUTE", "label": "Computational or secondary-data analysis", "patterns": ["\\bmachine learning model\\b", "\\bsecondary data analysis\\b", "\\bbibliometric analysis\\b", "\\bnetwork analysis\\b", "\\btext mining\\b"]},
+    {"code": "DESIGN_CONCEPT", "label": "Conceptual or theoretical paper", "patterns": ["\\bconceptual framework\\b", "\\btheoretical framework\\b", "\\bconceptual paper\\b", "\\bperspective article\\b"]}
+  ],
+  "effect_cues": {
+    "mixed_or_null": ["\\bno significant (?:effect|difference|association)\\b", "\\bnot significantly associated\\b", "\\bmixed (?:effects|results|findings|outcomes)\\b", "\\binconsistent (?:effects|results|findings)\\b", "\\bneither improved nor\\b"],
+    "positive": ["\\b(?:improv(?:e|ed|es|ing)|enhanc(?:e|ed|es|ing)|strengthen(?:ed|s|ing)?|facilitat(?:e|ed|es|ing)|enabl(?:e|ed|es|ing)|support(?:ed|s|ing)?)\\b", "\\bincreas(?:e|ed|es|ing) (?:access|quality|efficiency|transparency|accountability|trust|participation|coverage|accuracy)\\b", "\\breduc(?:e|ed|es|ing) (?:mortality|morbidity|costs?|corruption|inequalit(?:y|ies)|disparities|waiting time|errors?|burden)\\b", "\\bpositive (?:effect|impact|association|outcome)\\b", "\\bbenefit(?:ed|s|ing)?\\b"],
+    "negative": ["\\b(?:hinder(?:ed|s|ing)?|undermin(?:e|ed|es|ing)|threaten(?:ed|s|ing)?|exacerbat(?:e|ed|es|ing)|worsen(?:ed|s|ing)?|impair(?:ed|s|ing)?)\\b", "\\bincreas(?:e|ed|es|ing) (?:costs?|inequalit(?:y|ies)|disparities|bias|corruption|risk|exclusion|workload)\\b", "\\breduc(?:e|ed|es|ing) (?:access|quality|trust|privacy|transparency|accountability|participation)\\b", "\\bnegative (?:effect|impact|association|outcome)\\b", "\\bprivacy concerns?\\b", "\\bethical concerns?\\b", "\\bdigital divide\\b", "\\balgorithmic bias\\b", "\\bdata breach(?:es)?\\b"]
+  },
+  "evidence_cues": {
+    "causal": ["\\bcausal (?:effect|impact)\\b", "\\bled to\\b", "\\bresulted in\\b", "\\bcaused\\b", "\\bimpact evaluation\\b"],
+    "statistical": ["\\bsignificantly associated\\b", "\\bstatistically significant\\b", "\\bregression (?:analysis|results?)\\b", "\\bcorrelat(?:e|ed|ion)\\b", "\\bpredict(?:ed|s|ive)\\b"],
+    "observed": ["\\bparticipants? reported\\b", "\\brespondents? reported\\b", "\\binterviews? revealed\\b", "\\bfindings (?:show|showed|indicate|indicated|suggest|suggested)\\b", "\\bresults (?:show|showed|indicate|indicated|demonstrate|demonstrated)\\b"],
+    "proposed": ["\\bmay\\b", "\\bmight\\b", "\\bcould\\b", "\\bcan potentially\\b", "\\bpotential to\\b", "\\bis expected to\\b", "\\bwe propose\\b"]
+  },
+  "causal_connectors": ["\\bthrough\\b", "\\bvia\\b", "\\bby enabling\\b", "\\bthereby\\b", "\\bwhich (?:improves|enhances|reduces|increases|supports|strengthens)\\b", "\\bleads? to\\b", "\\bresults? in\\b", "\\bbecause\\b", "\\bdue to\\b", "\\bconsequently\\b"],
+  "negation_cues": ["\\bnot\\b", "\\bno evidence\\b", "\\bfailed to\\b", "\\bwithout\\b", "\\blacked\\b"]
+}

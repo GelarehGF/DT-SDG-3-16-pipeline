@@ -1,11 +1,10 @@
-numpy
-pandas
-scipy
-scikit-learn
-sentence-transformers
-transformers
-python-docx
-networkx
-matplotlib
-seaborn
-python-louvain
+# Revised terminal workflow; tested with Python 3.12.
+numpy==2.2.6
+pandas==2.3.3
+scipy==1.18.0
+scikit-learn==1.9.0
+matplotlib==3.11.0
+networkx==3.6.1
+Pillow==12.2.0
+pypdf==5.1.0
+openpyxl==3.1.5

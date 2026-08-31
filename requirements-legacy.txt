@@ -1,0 +1,8 @@
+# Optional historical notebook dependencies.
+-r requirements.txt
+sentence-transformers
+transformers
+python-docx
+seaborn
+python-louvain
+notebook
