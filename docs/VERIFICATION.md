@@ -5,7 +5,7 @@ scientific-library versions pinned in `requirements.txt`.
 
 ## Software checks
 
-- All 14 synthetic regression tests passed. They cover codebook compilation,
+- The original 14 synthetic regression tests passed. They cover codebook compilation,
   canonical file selection, reference exclusion, duplicate handling, repeatable
   extraction, source/output separation, literal spreadsheet text, undirected kNN
   union, all-pair similarity summaries, seed propagation, data-derived figure
@@ -18,6 +18,25 @@ scientific-library versions pinned in `requirements.txt`.
   labels; label placement was adjusted and the affected network figure rechecked.
 - Public figure scripts use portable fonts and command-line input/output paths.
   Network counts are calculated from inputs, not hard-coded manuscript values.
+
+## One-command runner update
+
+`main.py` now provides the single entry point. All **27 unit/regression tests**
+passed: the original 14 plus 13 runner checks covering stage order, connected
+paths, shared interpreter, argument/font propagation, workbook options, dry-run,
+timestamped outputs, overwrite protection, dependencies, logs/manifests, failures,
+missing artifacts, interruption, and actual child-process output streaming.
+
+An additional end-to-end check invoked `main.py` on 18 invented DOCX papers.
+All five real stages completed, producing the XLSX master, similarity and knowledge
+networks, analytical figures/supporting tables, six readable manuscript charts,
+and four network/supplement figures (ten manuscript PNGs total). This check is
+reproducible with `python tests/smoke_workflow.py --work-dir outputs/synthetic-smoke`.
+It does not use the private corpus or substitute for human validation.
+
+The runner adds orchestration and run-level provenance only. The five underlying
+analysis/figure scripts and codebook are unchanged by this follow-up update;
+their earlier private-corpus reproduction checks below remain applicable.
 
 ## Private-corpus reproduction
 

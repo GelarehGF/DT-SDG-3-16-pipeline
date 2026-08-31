@@ -4,6 +4,12 @@ This document describes the terminal workflow accompanying the network-integrate
 manuscript revision. It is not a claim that every automated relationship has been
 human-validated, nor a new validation protocol that replaces completed work.
 
+`python main.py --source /path/to/SDG3-16` runs the complete revised workflow.
+The runner does not change the analytical methods: it calls the five versioned
+scripts in dependency order, using one Python environment, and records parameters,
+software/codebook hashes, versions, logs, and completion/failure status. It creates
+a new run folder and does not merge or overwrite completed human-review records.
+
 ## 1. Preserve the distinction between workflows
 
 The original `3-16_dt_sdg.ipynb` uses MiniLM embeddings, semantic theory/domain

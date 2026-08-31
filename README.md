@@ -68,6 +68,7 @@ the other. See [methods and reporting boundaries](docs/METHODS_REPORTING.md).
 
 ```text
 .
+├── main.py                           # One command runs the complete revised workflow
 ├── 3-16_dt_sdg.ipynb                  # Original notebook, preserved unchanged
 ├── technology_outcome_pipeline/
 │   ├── pipeline.py                   # Canonical corpus → auditable master files
@@ -112,7 +113,40 @@ Matplotlib is the default figure font. Optional `--regular-font` and
 
 1. Place canonical source DOCX files in the folder structure above. Keep manuscripts,
    exports, and alternative representations outside this input.
-2. From the repository root, run:
+2. From the repository root, run **one command**:
+
+```bash
+python main.py --source "/path/to/SDG3-16"
+```
+
+If your corpus is already in `data/files/`, simply run `python main.py`.
+Keep all repository files together: `main.py` calls the five existing scripts in
+order using the same Python environment. It runs extraction, paper similarity and
+knowledge networks, analytical figures, readable manuscript charts, and the four
+network views/supplements. The XLSX master workbook is included by default.
+
+Results go into a fresh timestamped folder under `outputs/`:
+
+```text
+outputs/run-<timestamp>/
+├── master/               # CSV/JSON master data and XLSX workbook
+├── network/              # Similarity matrices, metrics, GraphML/GEXF
+├── analysis_figures/     # Analytical PNG/SVG/PDF figures and supporting tables
+├── manuscript_figures/   # Readable charts, network figures and supplements
+├── logs/                 # One progress/error log per stage
+└── run_manifest.json     # Parameters, hashes, package versions and stage status
+```
+
+Use `--output outputs/my-run` to choose a **new or empty** run folder,
+`--skip-workbook` to omit only XLSX, or `--dry-run` to preview the five commands
+without creating files. All options are listed by `python main.py --help`.
+The runner refuses to overwrite a populated output folder, stops on a failed
+stage, checks required output files, and keeps completed work and logs for diagnosis.
+It does not rerun the historical notebook, redo human validation, or rewrite the
+manuscript/native Word Figure 1.
+
+<details>
+<summary>Advanced: run the five stages individually</summary>
 
 ```bash
 python technology_outcome_pipeline/pipeline.py \
@@ -136,22 +170,32 @@ python technology_outcome_pipeline/make_network_figures_v10.py \
   --network-dir outputs/network --output outputs/manuscript_figures --seed 42
 ```
 
+</details>
+
 The numbered corpus layout is preferred. A fallback recursively reads DOCX/PDF/TXT
 when none of the canonical collections is found; that is not the manuscript's
 canonical-input workflow. The network stage requires the original DOCX paths saved
 in `master_papers.csv`; regenerate the master after moving the corpus.
 
-CSV/JSON files are the analysis inputs. Omit `--skip-workbook` and add
-`--fail-on-workbook-error` for an optional plain tabular XLSX export. This portable
-export does not reproduce the earlier application-specific workbook styling.
-Use a new output folder for each run: same-name generated files are replaced, and
-human review decisions are not automatically merged into reruns.
+CSV/JSON files are the analysis inputs. The plain tabular XLSX export does not
+reproduce the earlier application-specific workbook styling. The individual
+scripts can replace same-name files, whereas `main.py` protects existing run
+folders. Human review decisions are not automatically merged into reruns.
 
 Run synthetic tests without the private corpus:
 
 ```bash
 python -m unittest discover -s tests -v
 ```
+
+For an end-to-end software check using 18 invented papers (no private corpus):
+
+```bash
+python tests/smoke_workflow.py --work-dir outputs/synthetic-smoke
+```
+
+This executes `main.py` and all five real stages, including XLSX and ten
+manuscript PNGs. Use a new work folder each time.
 
 For the **historical notebook only**:
 
